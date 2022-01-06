@@ -24,11 +24,13 @@ const HomeScreen = () => {
                     minLength={2}
                     enablePoweredByContainer={false}
                     onPress={(data, details = null) => {
-                        dispatch(setOrigin({
-                            location: details.geometry.location,
-                            description: data.description
-                        }));
-                        
+                        dispatch(
+                            setOrigin({
+                                location: details.geometry.location,
+                                description: data.description,
+                            })
+                        );
+
                         dispatch(setDestination(null));
                     }}
                     returnKeyType={"search"}
