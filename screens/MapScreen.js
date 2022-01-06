@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyboardAvoidingView, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Map from '../components/Map';
 import tw from 'tailwind-react-native-classnames';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -10,7 +10,6 @@ const MapScreen = () => {
     const Stack = createNativeStackNavigator();
 
     return (
-        <KeyboardAvoidingView style={[tw`border-t border-gray-200 flex-shrink`, {flex: 1, justifyContent: "flex-end"}]} behavior={Platform.OS === "ios" ? "padding" : "height"} enabled>
         <View>
             <View style={tw`h-1/2`}>
                 <Map />
@@ -35,7 +34,6 @@ const MapScreen = () => {
                 </Stack.Navigator>
             </View>
         </View>
-        </KeyboardAvoidingView>
     )
 }
 
